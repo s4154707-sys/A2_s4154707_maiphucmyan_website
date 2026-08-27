@@ -1,0 +1,23 @@
+<svg width="1440" height="107" viewBox="0 0 1440 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dg_256_13)">
+<rect y="4" width="1440" height="91" fill="#7B7EAA"/>
+<rect x="5.5" y="9.5" width="1429" height="80" stroke="white" stroke-width="11"/>
+</g>
+<defs>
+<filter id="filter0_dg_256_13" x="-4" y="0" width="1452" height="107" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="8"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.27451 0 0 0 0 0.184314 0 0 0 0.7 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_256_13"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_256_13" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.25 0.25" numOctaves="3" seed="5557" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect2_texture_256_13">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>
