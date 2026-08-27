@@ -1,0 +1,351 @@
+/* =========================================================
+   GLOBAL CURSOR EFFECT
+   ========================================================= */
+
+.cursor-glow {
+    position: fixed;
+
+    width: 170px;
+    height: 170px;
+
+    pointer-events: none;
+    z-index: 999999;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 248, 210, .42) 0%,
+            rgba(255, 245, 190, .22) 20%,
+            rgba(255, 240, 180, .10) 42%,
+            rgba(255, 240, 180, .04) 58%,
+            transparent 75%
+        );
+
+    transform: translate(-50%, -50%);
+
+    filter: blur(3px);
+
+    mix-blend-mode: screen;
+
+    will-change:
+        left,
+        top;
+}
+
+
+/* =========================================================
+   STAR TRAIL
+   ========================================================= */
+
+.cursor-star {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 1000000;
+
+    width: 7px;
+    height: 7px;
+
+    background: #FFF9D8;
+
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        100% 35%,
+        68% 57%,
+        79% 100%,
+        50% 70%,
+        21% 100%,
+        32% 57%,
+        0% 35%,
+        39% 35%
+    );
+
+    filter:
+        drop-shadow(0 0 5px #FFF8D0)
+        drop-shadow(0 0 12px rgba(255,255,255,.95))
+        drop-shadow(0 0 20px rgba(255,240,180,.8));
+
+    animation:
+        starFall .9s ease-out forwards;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+@keyframes starFall {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0, 0)
+            scale(.2)
+            rotate(0deg);
+    }
+
+    12% {
+
+        opacity: 1;
+
+        transform:
+            translate(0, 0)
+            scale(1.35)
+            rotate(30deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--x),
+                var(--y)
+            )
+            scale(.05)
+            rotate(220deg);
+    }
+}
+
+
+/* =========================================================
+   CLICK RING
+   ========================================================= */
+
+.cursor-click-ring {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 1000001;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(255,248,210,.95);
+
+    box-shadow:
+        0 0 8px rgba(255,248,210,1),
+        0 0 20px rgba(255,240,180,.9),
+        0 0 40px rgba(255,240,180,.65);
+
+    transform:
+        translate(-50%, -50%)
+        scale(.2);
+
+    animation:
+        cursorClickRing .65s
+        cubic-bezier(.15,.8,.25,1)
+        forwards;
+}
+
+
+@keyframes cursorClickRing {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.2);
+    }
+
+    35% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(3.5);
+    }
+}
+
+
+/* =========================================================
+   CLICK FLASH
+   ========================================================= */
+
+.cursor-click-flash {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 1000000;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.9) 0%,
+            rgba(255,248,210,.6) 18%,
+            rgba(255,240,180,.25) 42%,
+            transparent 70%
+        );
+
+    transform:
+        translate(-50%, -50%)
+        scale(.2);
+
+    animation:
+        cursorFlash .4s
+        ease-out
+        forwards;
+}
+
+
+@keyframes cursorFlash {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.2);
+    }
+
+    25% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.8);
+    }
+}
+
+
+/* =========================================================
+   CLICK STARS
+   ========================================================= */
+
+.cursor-click-star {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 1000002;
+
+    width: 8px;
+    height: 8px;
+
+    background: #FFF8D5;
+
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        100% 35%,
+        68% 57%,
+        79% 100%,
+        50% 70%,
+        21% 100%,
+        32% 57%,
+        0% 35%,
+        39% 35%
+    );
+
+    filter:
+        drop-shadow(0 0 5px white)
+        drop-shadow(0 0 14px #FFF0B0);
+
+    animation:
+        clickStarBurst .7s
+        cubic-bezier(.15,.7,.25,1)
+        forwards;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+@keyframes clickStarBurst {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.2)
+            rotate(0deg);
+    }
+
+    20% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.4)
+            rotate(60deg);
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(-50% + var(--burst-x)),
+                calc(-50% + var(--burst-y))
+            )
+            scale(.05)
+            rotate(260deg);
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (pointer: coarse) {
+
+    .cursor-glow,
+    .cursor-star,
+    .cursor-click-ring,
+    .cursor-click-flash,
+    .cursor-click-star {
+
+        display: none !important;
+
+    }
+
+}

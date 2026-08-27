@@ -1,0 +1,576 @@
+.container{
+  position: relative;
+}
+html,body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body::-webkit-scrollbar {
+    display: none;
+    width: 0; 
+    height: 0;
+}
+body{
+  background:#EAF8D2;
+}
+.bg{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+}
+.bg::before{
+  content:"";
+  position:absolute;
+  width:220%;
+  height:220%;
+  left:-60%;
+  top:-60%;
+  background:
+    radial-gradient(circle,
+      #E1A562 2px,
+      transparent 2px) 0 0/24px 24px,
+    radial-gradient(circle at center,
+      #ffeaa4 0%,
+      #fffddd 45%,
+      #F8FFF0 100%);
+  animation: dotsMove 28s linear infinite;
+}
+@keyframes dotsMove{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(18%,-18%);
+}
+}
+@keyframes starsMove{
+from{
+transform:translate(0,0);
+}
+to{
+transform:translate(10%,-10%);
+}
+}
+body::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+background-image:
+radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+background-size:3px 3px;
+mix-blend-mode:soft-light;
+opacity:.35;
+}
+/*PHONE*/
+@media (max-width:767px){
+.bg::before{
+background-size:18px 18px, auto;
+}
+.bg::after{
+background-size:90px 90px;
+}
+  #MY {
+    width: 35vw !important;
+    left: 11vw !important;
+    top: 37vw !important;
+  }
+    #AN {
+    width: 30vw !important;
+    left: 41vw !important;
+    top: 39vw !important;
+  }
+   #S {
+  width: 26vw !important;
+  left: 64vw !important;
+  top: 40vw !important;
+   }
+  #PORTFOLIO {
+  width: 75vw !important;
+  left: 13vw !important;
+  top: 65vw !important;
+}
+  #strawberry-cake {
+  width: 66vw !important;
+  left: 20vw !important;
+  top: 83vw !important;
+}
+  #whip-cream {
+  width: 35vw !important;
+  left: 36vw !important;
+  top: 83vw !important;
+}
+  #chocolate-cat {
+  width: 21vw !important;
+  left: 58vw !important;
+  top: 108vw !important;
+}
+  #chat-box {
+  width: 28vw !important;
+  left: 67vw !important;
+  top: 90vw !important;
+}
+  #bon-appetit {
+  width: 26vw !important;
+  left: 25vw !important;
+  top: 85vw !important;
+}
+#lot-li {
+  width: 45vw !important;
+  left: 30vw !important;
+  top: 144vw !important;
+}
+#start-button {
+  width: 38vw !important;
+  left: 33vw !important;
+  top: 147vw !important;
+}
+}
+
+/*IPAD*/
+@media (min-width: 768px) and (max-width: 1279px) {
+  .bg::before{
+background-size:18px 18px, auto;
+}
+.bg::after{
+background-size:90px 90px;
+}
+  #MY {
+    width: 29vw !important;
+    left: 16vw !important;
+    top: 3vw !important;
+  }
+  #AN {
+    width: 27vw !important;
+    left: 40vw !important;
+    top: 4.2vw !important;
+  }
+  #S {
+  width: 24vw !important;
+  left: 63vw !important;
+  top: 5vw !important;
+}
+  #PORTFOLIO {
+  width: 75vw !important;
+  left: 13vw !important;
+  top: 25vw !important;
+}
+  #strawberry-cake {
+  width: 64vw !important;
+  left: 20vw !important;
+  top: 40vw !important;
+}
+  #whip-cream {
+  width: 35vw !important;
+  left: 36vw !important;
+  top: 40vw !important;
+}
+  #chocolate-cat {
+  width: 19vw !important;
+  left: 58vw !important;
+  top: 65vw !important;
+}
+  #chat-box {
+  width: 23vw !important;
+  left: 68vw !important;
+  top: 53vw !important;
+}
+  #bon-appetit {
+  width: 25vw !important;
+  left: 25vw !important;
+  top: 43vw !important;
+}
+#lot-li {
+  width: 35vw !important;
+  left: 34vw !important;
+  top: 94vw !important;
+}
+#start-button {
+  width: 28vw !important;
+  left: 37vw !important;
+  top: 97vw !important;
+}
+}
+#ren-left {
+    position: absolute;
+  left: 0vw;
+  top: 0vw;
+  bottom: 0vw;
+  width: auto;
+  z-index: -1;
+  height: calc(100% + 4px);
+}
+#ren-right {
+  position: absolute;
+  right: 0vw;
+  top: 0vw;
+  bottom: 0vw;
+  height: calc(100% + 4px);
+  z-index: -1;
+  width: auto;
+}
+#ren {
+  width: 100vw;
+  height: auto;
+  z-index: 2;
+}
+
+#under-ren {
+  position: fixed;
+  bottom: 0vw;
+  left: 0vw;
+  width: 100vw;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+#MY {
+position: absolute;
+width: 16vw;
+height: auto;
+left: 32.5vw;
+top: 1.5vw;
+}
+#AN {
+position: absolute;
+width: 14vw;
+height: auto;
+left: 45.8vw;
+top: 3vw;
+}
+#S {
+ position: absolute;
+width: 11vw;
+height: auto;
+left: 58vw;
+top: 4.5vw;
+}
+#PORTFOLIO {
+position: absolute;
+width: 37vw;
+height: auto;
+left: 31vw;
+top: 14vw;
+}
+#strawberry-cake {
+position: absolute;
+width: 29.5vw;
+height: auto;
+left: 36vw;
+top: 21vw;
+}
+#whip-cream {
+position: absolute;
+width: 15vw;
+height: auto;
+left: 44vw;
+top: 21.5vw;
+      transform-origin: center center;
+    animation: whipWiggle 1.8s ease-in-out infinite;
+    will-change: transform;
+}
+@keyframes whipWiggle{
+    0%{
+        transform: scale(0.96) rotate(-2deg);
+    }
+    50%{
+        transform: scale(1.04) rotate(2deg);
+    }
+    100%{
+        transform: scale(0.96) rotate(-2deg);
+    }
+}
+#bon-appetit {
+position: absolute;
+width: 11vw;
+height: auto;
+left: 39vw;
+top: 22vw;
+  animation: signSwing 2.4s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes signSwing{
+    from{
+        transform: rotate(-4deg);
+    }
+    to{
+        transform: rotate(4deg);
+    }
+}
+#lot-li {
+position: absolute;
+width: 27vw;
+height: auto;
+left: 70vw;
+top: 22vw;
+z-index: 4;
+  animation: slowRotate 12s linear infinite;
+  transform-origin: center center;
+}
+body {
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+body.fade-out {
+    opacity: 0;
+}
+#start-button {
+position: absolute;
+width: 21vw;
+height: auto;
+left: 72.2vw;
+top: 25vw;
+z-index: 4;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#start-button:hover {
+    transform: scale(1.12) rotate(-6deg);
+}
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#MY {
+  animation:
+    my-pop 0.7s ease-out forwards,
+    my-float 3s ease-in-out 0.7s infinite;
+  transform-origin: center;
+}
+@keyframes my-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes my-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(2deg);
+  }
+
+  75% {
+    transform: translateY(6px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+#AN {
+  animation:
+    my-pop 0.7s ease-out forwards,
+    my-float 4.5s ease-in-out 0.7s infinite;
+  transform-origin: center;
+}
+@keyframes my-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes my-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  45% {
+    transform: translateY(2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateY(7px) rotate(1.5deg);
+  }
+  85% {
+    transform: translateY(-2px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+#S {
+  animation:
+    my-pop 0.7s ease-out forwards,
+    my-float 4s ease-in-out 0.7s infinite;
+  transform-origin: center;
+}
+@keyframes my-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes my-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  45% {
+    transform: translateY(2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateY(7px) rotate(1.5deg);
+  }
+  85% {
+    transform: translateY(-2px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+#PORTFOLIO {
+  animation:
+      my-pop 0.7s ease-out forwards,
+    my-float 5s ease-in-out 0.7s infinite;
+  transform-origin: center;
+}
+@keyframes my-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes my-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+  45% {
+    transform: translateY(2px) rotate(-1deg);
+  }
+  70% {
+    transform: translateY(7px) rotate(1.5deg);
+  }
+  85% {
+    transform: translateY(-2px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+#chocolate-cat {
+position: absolute;
+width: 9vw;
+height: auto;
+left: 53.5vw;
+top: 32vw;
+z-index: 2;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+#chocolate-cat:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+#chocolate-cat.clicked {
+  animation: cat-pop 0.4s ease-out;
+}
+@keyframes cat-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.08) rotate(-2deg);
+  }
+}
+#chat-box {
+position: absolute;
+width: 15vw;
+height: auto;
+left: 57vw;
+top: 23vw;
+z-index: 2;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s cubic-bezier(.17, .67, .35, 1.4);
+}
+#chat-box.show {
+  opacity: 1;
+  transform: scale(1);
+}
+#star-field{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.star{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    will-change: transform, opacity;
+    background: transparent;
+    clip-path: polygon(
+50% 0%,
+61% 35%,
+98% 35%,
+68% 57%,
+79% 91%,
+50% 70%,
+21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    filter: drop-shadow(0 0 4px rgba(255,255,255,.35));
+}
